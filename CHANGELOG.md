@@ -5,6 +5,7 @@
 ### Added
 
 - Added artifact globs and required-artifact proof gates for SSH-backed macOS targets with non-following, protected-path-safe matching. Thanks @coygeek.
+- Added a `boxd` SSH-lease provider for [boxd](https://boxd.sh) KVM microVMs: lifecycle through the external `boxd` CLI, machines always created isolated (boxd's sandbox mode), SSH endpoint and linked key read from the CLI-maintained ssh-config entries, destroy-on-release by default with an opt-in stop-and-retain mode, and claim-gated cleanup.
 - Added `tiny` and `small` machine classes for lower-cost smoke checks and small repositories.
 - Added authoritative, target-aware machine-class catalogs to both JSON provider discovery commands while preserving the initial default-target class summaries.
 - Added an opt-in `cmake --version` preflight probe for POSIX, WSL2, and native Windows targets. Thanks @coygeek.
